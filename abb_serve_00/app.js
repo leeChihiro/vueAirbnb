@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser=require("body-parser")
 const session = require("express-session");
+//引入路由
 const detailsRouter=require("./routers/details.js");
 const indexRouter=require("./routers/index.js");
 const addRouter=require("./routers/add.js");

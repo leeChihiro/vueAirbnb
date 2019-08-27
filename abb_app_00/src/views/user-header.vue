@@ -52,7 +52,7 @@
         </el-menu-item>
       </el-submenu>
       <el-menu-item index="4">
-        <router-link to="Story" v-show="gy">故事</router-link>
+        <router-link to="Story">故事</router-link>
       </el-menu-item>
       <el-menu-item index="5" v-show="gy">
         <router-link to>帮助</router-link>
@@ -143,8 +143,10 @@ export default {
       });
     },
     g(i) {
-      this.gy = true;
-      this.gyh = false;
+      if(this.list[i].msg=="退出"){
+        this.gy = true;
+        this.gyh = false;
+      }
     }
   }
 };
